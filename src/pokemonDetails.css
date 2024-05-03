@@ -21,7 +21,7 @@
   }
   
   .bordered-table tr {
-    border-bottom: 1px solid #ccc; /* Add a 1px solid border below each row */
+    border-bottom: 1px solid #ccc;
   }
   
   .bordered-table th,
@@ -30,3 +30,6 @@
     text-align: left;
   }
   
+  .bordered-table th {
+    font-weight: bolder;
+  }
