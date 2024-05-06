@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import {useGetAllPokemonQuery} from "./pokemonApi";
+import {useGetAllPokemonQuery} from "../Store/pokemonApi";
+import '../Styling/displayPokemon.css'
 import Navbar from "./Navbar";
-import './displayPokemon.css'
 import EachPokemon from "./EachPokemon";
 const DisplayPokemon = () => {
 	const responseInfo = useGetAllPokemonQuery();

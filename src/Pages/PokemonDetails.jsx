@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
-import './pokemonDetails.css'
+import '../Styling/pokemonDetails.css'
 const PokemonDetails = () => {
     const location = useLocation();
     const { name } = useParams();

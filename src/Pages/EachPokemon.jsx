@@ -1,7 +1,7 @@
 import React from 'react';
-import { useGetMoreDetailsQuery } from "./pokemonApi";
+import { useGetMoreDetailsQuery } from "../Store/pokemonApi";
 import { useNavigate } from 'react-router-dom';
-import './displayPokemon.css'
+import '../Styling/displayPokemon.css'
 const EachPokemon = ({ pokemon }) => {
 	const navigate = useNavigate();
 	const redirectToDetails = (name, pokemon,) => {

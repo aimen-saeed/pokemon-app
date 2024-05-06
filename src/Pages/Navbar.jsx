@@ -1,4 +1,4 @@
-import './Navbar.css';
+import '../Styling/Navbar.css';
 import { useState, useEffect } from 'react';
 
 const Navbar = ({ title ="PokeReact"}) => {

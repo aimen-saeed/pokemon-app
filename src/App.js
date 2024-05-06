@@ -1,7 +1,6 @@
 import './App.css';
-import DisplayPokemon from './displayPokemon';
-import Navbar from './Navbar';
-import PokemonDetails from './PokemonDetails';
+import DisplayPokemon from './Pages/displayPokemon';
+import PokemonDetails from './Pages/PokemonDetails';
 import {Routes, Route } from "react-router-dom";
 function App() {
   return (
