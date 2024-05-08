@@ -1,33 +1,29 @@
 import { useEffect, useState } from "react";
-import {useGetAllPokemonQuery} from "../Store/pokemonApi";
-import '../Styling/displayPokemon.css'
-import Navbar from "./Navbar";
-import EachPokemon from "./EachPokemon";
+import { useGetAllPokemonQuery } from "../Store/pokemonApi";
+import Navbar from "../components/Navbar/Navbar";
+import EachPokemon from "../components/EachPokemon/EachPokemon";
+import './displayPokemon.css'
+
 const DisplayPokemon = () => {
 	const responseInfo = useGetAllPokemonQuery();
-	const [data, setData] = useState([]);
-	useEffect(() => {
-		responseInfo.isSuccess && setData(responseInfo.data?.results);
-	}, [responseInfo]);
 
 	if (responseInfo.isError) return <h2>An error occurred, {responseInfo.error.error}</h2>;
 
-
 	return (
 		<div>
-		<Navbar></Navbar>
-		  {responseInfo.isLoading ? <div> Loading...</div> : (
-			<div className="pokemon-list">
-			  {data.map((pokemon) => (
-				<div key={pokemon.name}>
-					<hr></hr>
-				  <EachPokemon pokemon={pokemon}></EachPokemon>
+			<Navbar />
+			{responseInfo.isLoading ? <div> Loading...</div> : (
+				<div className="pokemon-list">
+					{responseInfo.data?.results.map((pokemon) => (
+						<div key={pokemon.name}>
+							<hr></hr>
+							<EachPokemon pokemon={pokemon}></EachPokemon>
+						</div>
+					))}
 				</div>
-			  ))}
-			</div>
-		  )}
+			)}
 		</div>
-	  );
+	);
 };
 
 export default DisplayPokemon;

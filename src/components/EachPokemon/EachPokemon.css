@@ -1,17 +1,17 @@
-.pokemon-card{
+.pokemon-card {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
 
-.pokemon-image{
+.pokemon-image {
     width: 50%;
     height: 25%;
 }
 
-.pokemon-list{
-    
+.pokemon-list {
+
     display: flex;
     flex-direction: column;
     width: 30%;
@@ -19,7 +19,7 @@
     margin: auto;
 }
 
-.link{
-    text-decoration:none;
+.link {
+    text-decoration: none;
     color: black;
 }
